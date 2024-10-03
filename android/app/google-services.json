@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "335064525291",
+    "project_id": "ff-scratch-silejv",
+    "storage_bucket": "ff-scratch-silejv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335064525291:android:a03e6857d5bfb14c8a51ae",
+        "android_client_info": {
+          "package_name": "com.example.food_food"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg6HUkBGe2QIjQtqJQm9cs-djS-zaq4aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335064525291:android:c3eb4c9051aae40e8a51ae",
+        "android_client_info": {
+          "package_name": "com.mycompany.ffscratch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg6HUkBGe2QIjQtqJQm9cs-djS-zaq4aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
