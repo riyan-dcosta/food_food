@@ -5,6 +5,7 @@ import 'package:food_food/data/authentication/app_auth.dart';
 import 'package:food_food/features/authentication/components/input_label_field.dart';
 import 'package:food_food/features/authentication/sign_up_page.dart';
 import 'package:food_food/features/common/app_constants.dart';
+import 'package:food_food/features/common/app_global_state.dart';
 import 'package:food_food/features/common/app_snackbar/app_snackbar.dart';
 import 'package:food_food/features/common/components/elevated_container.dart';
 import 'package:food_food/features/common/navigation/app_navigation.dart';
@@ -26,6 +27,7 @@ class _SignInPageState extends ConsumerState<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = ref.watch(appTextThemeProvider(context));
     return EzScaffold(
       // appBar: EzAppBar(
       //     automaticallyImplyLeading: false,
@@ -37,6 +39,21 @@ class _SignInPageState extends ConsumerState<SignInPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Column(
+              children: [
+                Text(
+                  "Welcome to Food Food",
+                  style: textTheme.headlineMedium,
+                ),
+                Text(
+                  "A Food Ordering Application.",
+                  style: textTheme.bodyMedium,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
             ElevatedContainer(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -52,7 +69,9 @@ class _SignInPageState extends ConsumerState<SignInPage> {
                       style: Theme.of(context).textTheme.displayMedium,
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   InputLabelField(
                     label: "Email",
                     textController: emailController,
