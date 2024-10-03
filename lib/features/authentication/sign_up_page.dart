@@ -23,14 +23,14 @@ class SignUpPage extends ConsumerStatefulWidget {
 }
 
 class _SignUpPageState extends ConsumerState<SignUpPage> {
-  final usernameController = TextEditingController(text: "riyan");
-  final emailController = TextEditingController(text: "rdriyan@gmail.com");
-  final passwordController = TextEditingController(text: "123456");
+  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return EzScaffold(
-      appBar: EzAppBar(
+      appBar: const EzAppBar(
           automaticallyImplyLeading: false, title: "Signup Page", actions: []),
       body: Padding(
         padding: defaultPadding,
@@ -53,7 +53,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                       style: Theme.of(context).textTheme.displayMedium,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   InputLabelField(
@@ -118,7 +118,8 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 pushAndRemoveUntilCurrentPage(
-                                    context: context, newPage: SignInPage());
+                                    context: context,
+                                    newPage: const SignInPage());
                               },
                           )
                         ],

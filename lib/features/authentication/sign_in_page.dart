@@ -21,8 +21,8 @@ class SignInPage extends ConsumerStatefulWidget {
 }
 
 class _SignInPageState extends ConsumerState<SignInPage> {
-  final emailController = TextEditingController(text: "rdriyan@gmail.com");
-  final passwordController = TextEditingController(text: "12345678");
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -23,13 +23,13 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
   int selectedIndex = 0;
   List<Widget> pages = [
     ProductsPage(),
-
-    OrderDetailsPage(productsModel: ProductsModel(
-        productName: "Laptop",
-        productUrl: "https://picsum.photos/id/4/100/70",
-        maxAvailable: 2,
-        selected: 10,
-        isAvailable: true))
+    OrderDetailsPage(
+        productsModel: ProductsModel(
+            productName: "Laptop",
+            productUrl: "https://picsum.photos/id/4/100/70",
+            maxAvailable: 2,
+            selected: 10,
+            isAvailable: true))
   ];
 
   updateSelectedIndex(int index) {
@@ -44,14 +44,11 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
 
     /// fetch user
     WidgetsBinding.instance.addPostFrameCallback(
-          (timeStamp) async {
-        final userEmail = ref
-            .watch(userCredentialsStateProvider)
-            ?.user
-            ?.email;
+      (timeStamp) async {
+        final userEmail = ref.watch(userCredentialsStateProvider)?.user?.email;
         if (userEmail != null) {
           final userData =
-          await AppUsersImpl(ref: ref).fetchUser(email: userEmail);
+              await AppUsersImpl(ref: ref).fetchUser(email: userEmail);
         }
       },
     );
@@ -61,7 +58,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
   Widget build(BuildContext context) {
     return EzScaffold(
       appBar: EzAppBar(
-        title: "Dasoboard Page",
+        title: "Dashboard Page",
         actions: [
           IconButton(
               onPressed: () {
@@ -72,9 +69,9 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
               icon: Icon(Icons.exit_to_app))
         ],
       ),
-      body:pages[selectedIndex],
+      body: pages[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.ac_unit),
             label: "Products",
