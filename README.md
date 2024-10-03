@@ -17,7 +17,9 @@
   
 ### Video
 <video width="150" controls>
-<source src="https://github.com/riyan-dcosta/food_food/blob/main/examples/video/food_food_screen_recording.webm" type="video/webm">
+<source src="https://github.com/riyan-dcosta/food_food/blob/main/examples/video/food_food_screen_recording.webm?raw=true" type="video/webm">
+  <source src="https://github.com/riyan-dcosta/food_food/blob/main/examples/video/food_food_screen_recording.mp4?raw=true" type="video/mp4">
+
 unable to play video
 </video>
   
