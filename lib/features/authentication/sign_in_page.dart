@@ -27,7 +27,7 @@ class _SignInPageState extends ConsumerState<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = ref.watch(appTextThemeProvider(context));
+    final textTheme = TextThemeState().getTextTheme;
     return EzScaffold(
       // appBar: EzAppBar(
       //     automaticallyImplyLeading: false,

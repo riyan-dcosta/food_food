@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_food/features/common/app_global_state.dart';
 import 'package:food_food/features/dashboard/dashboard_page.dart';
 
 import 'features/authentication/sign_in_page.dart';
@@ -24,21 +25,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextThemeState().setContext(context);
     return MaterialApp(
-      title: 'Food Food a Food Ordering Application',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: SignInPage()
+        title: 'Food Food a Food Ordering Application',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: SignInPage()
 
-      /// todo: after fixing firebase core initialization issue
-      // home: StreamBuilder(
-      //   stream: FirebaseAuth.instance.authStateChanges(),
-      //   builder: (context, snapshot) =>
-      //       (snapshot.hasData) ? const DashboardPage() : const SignInPage(),
-      // ),
-    );
+        /// todo: after fixing firebase core initialization issue
+        // home: StreamBuilder(
+        //   stream: FirebaseAuth.instance.authStateChanges(),
+        //   builder: (context, snapshot) =>
+        //       (snapshot.hasData) ? const DashboardPage() : const SignInPage(),
+        // ),
+        );
   }
 }

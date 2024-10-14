@@ -40,9 +40,7 @@ class AppUsersImpl implements AppUsers {
     final db = ref.watch(fireStoreDBProvider);
     final user = await db.collection("users").doc(email).get();
     final userModel = UserModel.fromJson(user.data() ?? {});
-    ref
-        .watch(appUserDataProvider.notifier)
-        .updateUserData(userModel: userModel);
+    ref.read(appUserDataProvider.notifier).updateUserData(userModel: userModel);
     return user.data() ?? {};
   }
 }

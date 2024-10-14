@@ -14,7 +14,25 @@ class FireStoreDB extends _$FireStoreDB {
   }
 }
 
-@riverpod
-TextTheme appTextTheme(AppTextThemeRef ref, BuildContext context) {
-  return Theme.of(context).textTheme;
+class TextThemeState {
+  TextThemeState._();
+
+  static final _instance = TextThemeState._();
+
+  static BuildContext? _context;
+
+  setContext(BuildContext name) {
+    _context = name;
+  }
+
+  TextTheme get getTextTheme {
+    if (_context == null) {
+      throw UnimplementedError("Build Context is not initialized");
+    }
+    return Theme.of(_context!).textTheme;
+  }
+
+  factory TextThemeState() {
+    return _instance;
+  }
 }

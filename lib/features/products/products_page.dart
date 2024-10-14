@@ -21,20 +21,23 @@ class _ProductsPageState extends ConsumerState<ProductsPage> {
 
   List<ProductsModel> products = [
     const ProductsModel(
-        productName: "Laptop",
-        productUrl: "https://picsum.photos/id/4/100/70",
+        productName: "Chilly Mushroom",
+        productUrl:
+            "https://b.zmtcdn.com/data/dish_photos/b14/d09488acecf64321dd51ade1447fbb14.jpg?fit=around|130:130&crop=130:130;*,*",
         maxAvailable: 2,
         isAvailable: true,
         selected: 0),
     const ProductsModel(
-        productName: "Book",
-        productUrl: "https://picsum.photos/id/24/100/70",
+        productName: "Golden Baby Corn",
+        productUrl:
+            "https://b.zmtcdn.com/data/dish_photos/032/78590d630d1ef2b27f01be6e5b865032.jpg?fit=around|130:130&crop=130:130;*,*",
         maxAvailable: 2,
         selected: 0,
         isAvailable: true),
     const ProductsModel(
-        productName: "Grapes",
-        productUrl: "https://picsum.photos/id/75/100/70",
+        productName: "Paneer 65",
+        productUrl:
+            "https://b.zmtcdn.com/data/dish_photos/da3/d71ffc2ed61de7a2e44ba376c37b2da3.jpg?fit=around|130:130&crop=130:130;*,*",
         maxAvailable: 2,
         selected: 0,
         isAvailable: true),
